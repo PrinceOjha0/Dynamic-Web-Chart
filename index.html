@@ -22,18 +22,18 @@
         <link rel="stylesheet" type="text/css" href="css/admidashboard.css">
     </head>
 <body>
-    <section id="nav-bar">
+    <section id="nav-bar ">
 <nav>
     <div class="container">
         
-        <img src="image/logo.png" alt="logo" class="logo">
+        <img src="image/logo.png" alt="logo" class="logo navbar-brand" >
         <div class="search-bar">
             <span class="material-icons-sharp">
                 search
                 </span>
                 <input type="search" placeholder=" search">
         </div>
-        <div class="profile-area ">
+        <div class="profile-area navbar ">
             <div class="theme-btn">
                 <span class="material-icons-sharp active">  light_mode  </span>
                     <span class="material-icons-sharp"> dark_mode   </span>
@@ -51,7 +51,8 @@
         </div>
     </div>
 </nav>
-</section>    
+    </section>  
+
 <section id="main">
 <div class="container-fluid">
     <main>
@@ -268,44 +269,130 @@
         <div class="badge">
             <span class="material-icons-sharp"> add </span>
         </div>
-        </div> 
+     
 
         <div class="badge">
             <span class="bg-success"></span>
+           <div>
             <h5>Training</h5>
             <h4>$100</h4>
+            </div>
         </div>
         <div class="badge">
             <span class="bg-primary"></span>
-            <h5>Internet</h5>
+            <div>
+            <h5 >Internet</h5>
             <h4>$50</h4>
         </div>
-    
+        </div>
       <div class="badge">
           <span class="bg-danger"></span>
-          <h5>EDUCATION</h5>
-          <h4>$250</h4>
+          <div>
+          <h4>EDUCATION</h>
+          <h3>$250</h3>
+         </div>
           
     </div>
-  </div>
-</div>
-<canvas id="chart">
+      </div>
+     </div>
+<!-- <canvas id="chart">
 
-</canvas>
+</canvas> -->
+
+
+
+<div>
+  <canvas id="chart"></canvas>
 </div>
+
+
+
 
 <!--END OF PAYMENT-->
 
 </section>
-</section>
+
         <!--End of Middle-->
                 <section class="right">
-                    
+                    <div class="investments">
+                        <div class="header">
+                        <h>Investment</h>
+                        <a href="#">More  <span class="material-icons-sharp">chevron_right</span></a>
+                        </div>
+                           <div class="investment">
+                            <img src="images/uniliver.png">
+                            <h4>uniliver</h4>
+                            <div class="date-time">
+                                <p>19 April, 2023</p>
+                                <small class="text-muted">9:14Pm</small>
+                            </div>
+                            <div class="bonds"><p>1402</p>
+                                <small class="text-muted">Bonds</small>
+                           </div>                    
+                           <div class="amount">
+                            <h4>$20,033</h4>
+                            <small class="danger">-4.27%</small>
+                           </div>
+                        </div>
+                 <!--END OF INVESTMENT 1-->
+                 <div class="investment">
+                    <img src="images/tesla.png">
+                    <h4>Tesla</h4>
+                    <div class="date-time">
+                        <p>18 April, 2023</p>
+                        <small class="text-muted">8:15Pm</small>
+                    </div>
+                    <div class="bonds"><p>15002</p>
+                        <small class="text-muted">Bonds</small>
+                   </div>                    
+                   <div class="amount">
+                    <h4>$200,033</h4>
+                    <small class="success">+14.27%</small>
+                   </div>
+                </div>
+            <!--END OF INVESTMENT 2-->
+              <div class="investment">
+                <img src="images/monster.png">
+                <h4>uniliver</h4>
+                <div class="date-time">
+                    <p>16 April, 2023</p>
+                    <small class="text-muted">6:14Pm</small>
+                </div>
+                <div class="bonds"><p>5402</p>
+                    <small class="text-muted">Bonds</small>
+               </div>                    
+               <div class="amount">
+                <h4>$50,033</h4>
+                <small class="success">84.27%</small>
+               </div>
+             </div>
+              <!--END OF INVESTMENT 3--> 
+              <div class="investment">
+                <img src="images/mcdonalds.png">
+                <h4>Mcdonalds</h4>
+                <div class="date-time">
+                    <p>16 April, 2023</p>
+                    <small class="text-muted">6:14Pm</small>
+                </div>
+                <div class="bonds"><p>5402</p>
+                    <small class="text-muted">Bonds</small>
+               </div>                    
+               <div class="amount">
+                <h4>$50,033</h4>
+                <small class="danger">-4.27%</small>
+               </div>
+             </div>
+              <!--END OF INVESTMENT 3-->
+                    </div>
+                    <!--END OF INVESTMENTs-->
             </section>
+        </div>
         <!--End of Right-->    
     </main>
-
-
-
+<!-- END OF ASIDE-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" 
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="./javascript/main.js"></script>
 </body>
 </html>

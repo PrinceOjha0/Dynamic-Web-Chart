@@ -26,14 +26,14 @@
 
 }
 *{
-margin: 0;
-padding: 0;
-outline: 0;
-border:0;
-appearance: none;
+margin: 0 ;
+padding: 0 ;
+outline: 0 ;
+border:0 ;
+appearance: none ;
 text-decoration: none;
 list-style: none;
-box-sizing: border-box;
+box-sizing: border-box ;
 }
 html{
     font-size: 12px;
@@ -99,6 +99,10 @@ small{
     background:var(--color-primary);
     box-shadow: 0 0.8rem 0.8rem  var(--color-primary-light);
 }
+.bg-primary-light{
+    background:var(--color-danger-light);
+    box-shadow: 0 0.8rem 0.8rem  var(--color-primary-light);
+}
 
 .bg-danger{
     background:var(--color-danger);
@@ -109,6 +113,10 @@ small{
     background:var(--color-success);
     box-shadow: 0 0.8rem 0.8rem  var(--color-success-light);
 }
+.bg-success-light{
+    background:var(--color-success-light);
+    box-shadow: 0 0.8rem 0.8rem  var(--color-success-light);
+}
 .bg-purple{
     background:var(--color-purple);
     box-shadow: 0 0.8rem 0.8rem  var(--color-purple-light);
@@ -117,7 +125,9 @@ small{
     background: #27282f;
     box-shadow: 0 0.8rem 0.8rem rgba(0, 0, 0, 0.2);
 }
-
+.bg-purple-light{
+    background: var(--color-purple-light);
+}
 .badge {
     font-weight: 700;
     color: black !important;;
@@ -125,9 +135,9 @@ small{
 }
 /*======nav bar====*/
 nav{
-    width: 100%;
+    width: 103%;
     background:var(--color-white);
-    padding: 1rem 0;
+    /* padding: 1rem 0; */
  }
 
  nav .container{
@@ -141,6 +151,7 @@ nav{
 }
 
 nav img.logo{
+   
     width: 7rem;
 }
 
@@ -155,7 +166,7 @@ nav .search-bar{
   color: var(--color-gray-light);
   position: absolute;
   left: 15%;
-}
+} 
 nav .search-bar input[type="search"]{
     color: var(--color-dark);
     background-color: transparent;
@@ -318,6 +329,7 @@ nav .profile-area .theme-btn span{
         justify-content: space-between;
         box-shadow: 0 2rem 3rem var(--color-danger-light);
        transition: all 250ms ease;
+       min-width: 22rem;
      }
      main section.middle.cards{
         box-shadow: none;
@@ -393,6 +405,13 @@ main .fast-payment{
     align-items: center;
     gap: 2rem;
 }
+main .fast-payment .badges{
+    display: flex;
+    gap: 1rem;
+    align-self: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
 main .fast-payment .badge{
     display: flex;
     gap: 1rem;
@@ -412,7 +431,7 @@ main .fast-payment .badge{
     display: flex;
     align-items: center;
     gap: 1rem;
-transition: all  300ms ease;
+    transition: all  300ms ease;
 }
 main .fast-payment .badge:hover{
     box-shadow:0 0 1.5rem var(--color-primary-light);
@@ -430,7 +449,7 @@ main .fast-payment .badge div{
     gap: 2rem;
     align-self: center;
 }
- /*===========FAST PAYMENT=====*/
+ /*===========CANVAS=====*/
  canvas#chart{
     background:var(--color-white);
     max-width: 100%;
@@ -438,3 +457,179 @@ main .fast-payment .badge div{
     border-radius: var(--card-border-radius);
     padding: var(--card-padding);
 }
+ /*===========INVESTMENT =========*/
+  main section.right .investments{
+    background:var(--color-white);
+    border-radius: var(--card-border-radius);
+  }
+  main section.right .investments img{
+    width:2.4rem;
+  }
+  main section.right .investments .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--card-padding);
+    padding-bottom: 0;
+  }
+  main section.right .investments .header a{
+    display: flex;
+    align-items: center;
+    color: var(--color-primary);
+  }
+  main section.right .investments .investment{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--card-padding);
+    border-bottom: 1px  solid var(--color-light);
+    transition: all 300ms ease;
+  }
+  
+  main section.right .investments .investment:last-child{
+    border: none;
+  }
+  main section.right .investments .investment:hover{
+    background-color: var(--color-light);
+    cursor: pointer;
+  }
+/*======Recent Transaction=====*/
+main .recent-transactions{
+margin-top: 2rem;
+}
+main .recent-transactions img{
+    width: 2.2rem;
+}
+main .recent-transactions .header{
+    display: flex;
+justify-content: space-between;
+    margin-bottom:1rem;
+}
+ main .recent-transactions .header a{
+    display: flex;
+align-items: center;
+color: var(--color-primary);
+} 
+main .recent-transactions .transaction{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1.5rem var(--card-padding);
+    border-radius: var(--card-border-radius);
+    transition: all 300ms ease;
+}
+main .recent-transactions .transaction:hover{
+    background: var(--color-white);
+    cursor:pointer
+}
+main .recent-transactions .transaction .service{
+    display: flex;
+    gap:1rem;
+}
+main .recent-transactions .transaction .service .icon{
+    padding:var(--padding-2);
+    border-radius: var(--border-radius-1);
+    display: flex;
+    align-items: center;
+}
+main .recent-transactions .card-details{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+main .recent-transactions .card-details .card{
+    display: flex;
+    width: 4.6rem;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius-2);
+} 
+/*====================MEDIA QUERIES FOR TABLETS=========*/
+@media screen and (max-width:1024px) {
+    nav .search-bar{
+        display: none;
+    }
+    nav .profile-area{
+        gap:2rem;
+    }
+    nav .profile-area button#menu-btn {
+        display:inline;
+        background: transparent;
+        color: var(--color-dark);
+    }
+    main{
+        grid-template-columns: 1fr;
+     }
+     /*
+    main aside{ 
+        position: fixed;
+        top:0;
+        left: 0;
+        z-index:3;
+        background: var(--color-white);
+        width: 22rem;
+        height: 100vh;
+        box-shadow: 2rem 0 2rem var(--color-primary-light);
+        display: none;
+    }
+    main aside button#close-btn{
+        display: inline-block;
+        height: 3rem;
+        width: 3rem;
+        position: absolute;
+        top:1rem;
+        right:1rem;
+        z-index: 4;
+        background: transparent;
+        color: var(--color-dark);
+    }
+    button:hover{
+        cursor: pointer;
+    }
+    main aside .sidebar{
+        margin-top:4rem;
+    }
+    /* main aside .updates{
+        display: none;
+    } */
+    /* main section.middle .cards .card {
+        grid-template-columns: 1fr 1fr;
+    }
+    main canvas{
+        margin: 3rem 0 1rem;
+    }
+    main section.right .recent-transactions{
+        margin-top: 3rem;
+    }
+    body{
+        background: red;
+      }
+    */
+}
+/*====================MEDIA QUERIES FOR MOBILE=========*/
+/* @media screen and (max-width: 600px) {
+   body{
+     background: black;
+   }
+   nav .profile-area{
+    gap:2.6rem;
+   }
+   nav .profile h5, nav .profile span{
+    display:none;
+   }
+
+   main section.middle .cards{
+  grid-template-columns: 1fr;
+   }
+   main section.middle .fast-payment{
+    flex-direction:column;
+    align-items: flex-start;
+    margin-top: 3rem;
+    gap:1.4rem;
+
+   }
+   
+ 
+} */
