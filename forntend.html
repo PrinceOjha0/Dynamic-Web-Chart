@@ -18,7 +18,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
-      <!--Styling Sheet-->
+     
+     
+     
+        <!--Styling Sheet-->
         <link rel="stylesheet" type="text/css" href="css/admidashboard.css">
     </head>
 <body>
@@ -107,13 +110,14 @@
                     </aside>
                     <!--End of aside-->
                    
-                        <section class="middle">
-                            <div class="header">
-                                <h1>Overview</h1>
+                        <section class=" middle">
+                            <div class="container header">
+                                <h1>User Dashboard</h1>
                                 <input type="date">
                             </div>
-                            <div class="cards">
-                                <div class="card">
+                            <div class="container">
+                            <div class="cards d-flex  row">
+                                <div class="card col-lg-3  col-md-4">
                                     <div class="top">
                                         <div class="left">
                                             <img src="image/btc.png">
@@ -129,7 +133,7 @@
                                 <div class="bottom">
                                      <div class="left">
                                          <small>Card Holder</small>
-                                         <h5> Prince Ojha</h5>
+                                         <h5> Mr. Himanshu</h5>
                                     </div>
                              
                                 <div class="right">
@@ -145,7 +149,7 @@
                             </div>
                         </div>
                        <!--END OF CARD -1-->
-                        <div class="card">
+                        <div class="card col-lg-3 col-md-4">
                                     <div class="top">
                                         <div class="left">
                                             <img src="image/eth.png">
@@ -176,8 +180,9 @@
                                 </div>
                             </div>
                         </div>
+                        
                        <!--END OF CARD -2-->
-                       <div class="card">
+                       <div class="card col-lg-3 col-md-4">
                         <div class="top">
                             <div class="left">
                                 <img src="image/btc.png">
@@ -193,7 +198,7 @@
                     <div class="bottom">
                          <div class="left">
                              <small>Card Holder</small>
-                             <h5> Maneet  Singh/h5>
+                             <h5> Maneet  Singh</h5>
                         </div>
                  
                     <div class="right">
@@ -210,12 +215,13 @@
             </div>
            <!--END OF CARD -3-->                       
                        </div>
+                    </div>
                        <!--END OF CARDS-->
-                       <div class="monthly-report">
-                        <div class="report">
+                       <div class="container monthly-report">
+                        <div class="row report">
                             <h3 class="fw-bold">Income</h3>
                             <div>
-                                  <details>
+                                  <details class="col">
                                 <h1>$29,023</h1>
                                 <h6 class="success">+3.5%</h6>
                                 <p class="text-muted">Compared to $26,938 last month</p>
@@ -258,22 +264,22 @@
                 <!---END OF TURNOVER REPORT -->
                    </div>
                 <!---END OF MONTHLY REPORT-->
-                <div class="fast-payment">
-                    <h2 class="fw-bold">Fast Payment</h2>
+                <div class="container fast-payment">
+                    <h2>Fast Payment</h2>
                        <div class="badges">
-                        <div class="badge">
+                        <div class="bade">
                             <span class="material-icons-sharp"> add </span>
                         </div>
                      
-                       <div class="badge">
+                       <div class=" bade">
                         <span class="bg-success"></span>
                        <div>
-                        <h5 class="fw-bold">Training</h5>
+                        <h5 >Training</h5>
                         <h4>$100</h4>
                         </div>
                     </div>
                     <!--End of badge 1-->
-                    <div class="badge">
+                    <div class=" bade">
                         <span class="bg-success"></span>
                        <div>
                         <h5>Internet</h5>
@@ -281,7 +287,7 @@
                         </div>
                     </div>
                     <!--End of badge 1-->
-                    <div class="badge">
+                    <div class=" bade">
                         <span class="bg-success"></span>
                        <div>
                         <h5>EDUCATION</h5>
@@ -294,19 +300,34 @@
                 <!--END OF Badges-->  
                 </div>
                 <!--END OF PAYMENT-->
-                <div>
-                    <canvas id="chart"></canvas>
-                  </div>
+                <div class="container">
+                   <div class="row">
+                    <div>
+  <label for="chart-type">Chart Type:</label>
+  <select id="chart-type">
+    <option value="line">Line</option>
+    <option value="bar">Bar</option>
+    <option value="pie">Pie</option>
+  </select>
+</div>
+                    <div class="col">
+
+                        <canvas id="chart"></canvas>
+                    </div>
+                </div>
+                </div>
 
                     </section>
                        <!--End of Middle-->
                        <section class="right">
+                        <div class="container">
+                            <div class="row-5 mg-l-1">
                         <div class="investments">
                             <div class="header">
                             <h1 class="fw-bold" >Investment</h1>
                             <a href="#">More  <span class="material-icons-sharp">chevron_right</span></a>
                             </div>
-                               <div class="investment">
+                               <div class="investment col-14">
                                 <img src="images/uniliver.png">
                                 <h4>uniliver</h4>
                                 <div class="date-time">
@@ -322,7 +343,7 @@
                                </div>
                             </div>
                      <!--END OF INVESTMENT 1-->
-                     <div class="investment">
+                     <div class="investment col-14">
                         <img src="images/tesla.png">
                         <h4>Tesla</h4>
                         <div class="date-time">
@@ -338,7 +359,7 @@
                        </div>
                     </div>
                 <!--END OF INVESTMENT 2-->
-                  <div class="investment">
+                  <div class="investment col-14">
                     <img src="images/monster.png">
                     <h4>monster</h4>
                     <div class="date-time">
@@ -354,7 +375,7 @@
                    </div>
                  </div>
                   <!--END OF INVESTMENT 3--> 
-                  <div class="investment">
+                  <div class="investment col-14">
                     <img src="images/mcdonalds.png">
                     <h4>Mcdonalds</h4>
                     <div class="date-time">
@@ -371,13 +392,16 @@
                  </div>
                   <!--END OF INVESTMENT 3-->
                         </div>
+                    </div>
+                </div>
                         <!--END OF INVESTMENTs-->
-                        <div class="recent-transactions">
-                            <div class="header">
+                        <div class="container">   
+                        <div class="recent-transactions row" >
+                            <div class="header ">
                                 <h2>Recent Transaction</h2>
                                 <a href="#">More <span class="material-icons-sharp">chevron_right</span></a>
                             </div>
-                            <div class="transaction">
+                            <div class="transaction col">
                                 <div class="service">
                                     <div class="icon bg-primary-light">
                                         <span class="material-icons-sharp danger">headphones</span>
@@ -400,7 +424,7 @@
                                     </div>
                                 
                                 <!--END OF  TRANSACTION 1-->
-                                <div class="transaction">
+                                <div class="transaction col">
                                      <div class="service">
                                         <div class="icon bg-purple-light">
                                             <span class="material-icons-sharp purple">shopping_bag</span>
@@ -423,7 +447,7 @@
                                         </div>
                                     
                                     <!--END OF  TRANSACTION  2 -->
-                                    <div class="transaction">
+                                    <div class="row">                                    <div class="transaction col">
                                         <div class="service">
                                             <div class="icon bg-success-light">
                                                 <span class="material-icons-sharp success">restaurant</span>
@@ -447,7 +471,7 @@
                                         
                                         <!--END OF  TRANSACTION 3-->
                                         
-                                       <div class="transaction">
+                                       <div class="transaction col">
                                             <div class="service">
                                                 <div class="icon bg-purple-light">
                                                     <span class="material-icons-sharp dark">restaurant</span>
@@ -468,9 +492,13 @@
                                                 </div>
                                                     <h4 class="fw-bold">$2000</h4>
                                                 </div>
+                                            </div>
+
                                             
                                             <!--END OF  TRANSACTION 4-->
                             </div>
+                        </div>
+
                             <!--END OF RECENT TRANSACTION-->
                        </section>
                           <!--End of Right-->
