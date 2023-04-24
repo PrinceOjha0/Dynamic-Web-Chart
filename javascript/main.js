@@ -106,14 +106,32 @@
 // });
 
 // Define the chart configurations for each chart type
+let chartName ;
 const chartConfigs = {
+  myline: {
+    type: "line",
+    data: {
+      labels: [],
+      datasets: [
+        {
+          label:   `Line-Chart Price (usd)`,
+          data: [],
+          borderColor: "red",
+          borderWidth: 2,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+    },
+  },
   line: {
     type: "line",
     data: {
       labels: [],
       datasets: [
         {
-          label:   `${name} Price (usd)`,
+          label:   `Line-Chart Price (usd)`,
           data: [],
           borderColor: "red",
           borderWidth: 2,
@@ -130,10 +148,27 @@ const chartConfigs = {
       labels: [],
       datasets: [
         {
-          label: "BTC Price (usd)",
+          label: "Bar Chart Price (usd)",
           data: [],
           backgroundColor: "blue",
           borderWidth: 2,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+    },
+  },
+  radar: {
+    type: "radar",
+    data: {
+      labels: [],
+      datasets: [
+        {
+          label: "radar Chart Price (usd)",
+          data: [],
+          backgroundColor: "Pink",
+          borderWidth: 3,
         },
       ],
     },
@@ -147,7 +182,7 @@ const chartConfigs = {
       labels: [],
       datasets: [
         {
-          label:  `${name} Price (usd)`,
+          label:  `Pie-Chart Price (usd)`,
          data: [],
           backgroundColor: "Yellow",
           borderWidth: 2,
@@ -159,10 +194,15 @@ const chartConfigs = {
     },
   },
 };
+const updateChartLabel = (name) => {
+  const chartConfig = chartConfigs.line;
+  chartConfig.data.datasets[0].label = `${name} Price (usd)`;
+  chart.update();
+}         
 
 // Create a new Chart.js chart instance with the default line chart configuration
 const ctx = document.getElementById("chart").getContext("2d");
-const chart = new Chart(ctx, chartConfigs.line);
+const chart = new Chart(ctx, chartConfigs.myline);
 
 // Get a reference to the dropdown element
 const dropdown = document.getElementById("chart-type");
@@ -180,18 +220,17 @@ dropdown.addEventListener("change", (event) => {
 });
 
 // Open a WebSocket connection to the CoinCap API
-const loadChartData = ((name)=>{
-  console.log(name);
+let socket;
 
+const loadChartData = (name) => {
   const socketUrl = `wss://ws.coincap.io/prices?assets=${name}`;
-  const socket = new WebSocket(socketUrl);
-  console.log(socket);
+  socket = new WebSocket(socketUrl);
   
   socket.addEventListener("open", (event) => {
     console.log("WebSocket connection opened");
+    chartName = name;
   });
   
-  // Handle incoming WebSocket messages and update the chart data
   socket.addEventListener("message", (event) => {
     const data = JSON.parse(event.data);
     console.log(data);
@@ -201,35 +240,15 @@ const loadChartData = ((name)=>{
 
     chart.update();
   });
-})
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  // Handle errors
+  socket.addEventListener("error", (event) => {
+    console.log("WebSocket error");
+  });
+  
+  // Return the socket object so it can be used to close the connection
+  return socket;
+}
 
 
 
@@ -240,6 +259,7 @@ const loadChartData = ((name)=>{
 /// right side chart table
 
 const investmentContainer = document.querySelector(".investment-container");
+const chartname = document.querySelector(".chart-name");
 
 
 
@@ -258,8 +278,8 @@ async function fetchData() {
   try {
     const response = await fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=inr&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en`);
     const data = await response.json();
-    console.log(data.length);
-    console.log(data);
+   // console.log(data.length);
+    //console.log(data);
     data.map((item) => {
       const investmentElement = document.createElement('div');
       investmentElement.className = 'investment col-14';
@@ -283,8 +303,15 @@ async function fetchData() {
 
       // Add event listener to investment container
       investmentElement.addEventListener('click', () => {
+        if (socket) {
+          socket.close();
+        }
+        chartname.innerHTML = item.name;
         loadChartData(item.id)
-        console.log(`You clicked on ${item.name}!`);
+     console.log(`You clicked on ${item.name}!`);
+    //  chartConfigs.data.labels = [];
+    //  chartConfigs.data.datasets[0].data = [];
+    //  chartConfigs.chartInstance.update();
         // Add code to do something when container is clicked
       });
     });

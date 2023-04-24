@@ -1,10 +1,11 @@
 /*  Root css varibles*/
 :root {
-    --color-white:#ffffff;
-    --color-light: #f0eff5;
+    --color-white:#0D102D;
+    --color-light: #101436;
     --color-gray-light: rgb(133, 132, 139);
-    -color-gray-dark:#56555e;
-    --color-dark: #27282f;
+    -color-gray-dark:#fff;
+    --color-dark: #ffffff;
+     --color-purple-hover :#FF06B7;
     --color-primary: rgb(71, 7, 234);
     --color-success: rgb(34, 202, 75);
     --color-danger: rgb(255, 67, 54);
@@ -398,8 +399,7 @@ nav .profile-area .theme-btn span{
         display: flex;
      gap: 2rem;
      }
-     /* col-title-2 Exchange */
-   
+     /*=======================MONTHLY REPORT==========*/
       main .monthly-report{
      display: grid;
     grid-template-columns:  repeat(4, 1fr);
@@ -409,7 +409,7 @@ nav .profile-area .theme-btn span{
     }
     main .monthly-report h1{
         font-weight: 800;
-        font-size: 8rem;
+        font-size: 1.8rem;
     }
     /*===========FAST PAYMENT=====*/
 main .fast-payment{

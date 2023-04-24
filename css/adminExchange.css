@@ -284,6 +284,7 @@ nav .profile-area .theme-btn span{
      main aside .sidebar h4{
         font-weight: 500;
      }
+
 /*=====Updates*/
      main aside .updates {
         background:var(--color-white);
@@ -316,6 +317,10 @@ nav .profile-area .theme-btn span{
         display: flex;
         align-items: center;
         gap: 1rem;
+     }
+     main section.middle .header h1{
+        font-weight: 800;
+        font-size: 3.7rem;
      }
      main section.middle .header input[type="date"]{
         padding: 0.5rem 2rem;
@@ -398,8 +403,7 @@ nav .profile-area .theme-btn span{
         display: flex;
      gap: 2rem;
      }
-     /* col-title-2 Exchange */
-   
+     /*=======================MONTHLY col-title-2==========*/
       main .monthly-report{
      display: grid;
     grid-template-columns:  repeat(4, 1fr);
@@ -407,9 +411,22 @@ nav .profile-area .theme-btn span{
     justify-content: space-between;
     margin-top: 2rem;
     }
-    main .monthly-report h1{
+    main .monthly-report h1 {
         font-weight: 800;
-        font-size: 8rem;
+        font-size: 5.1rem;
+    }
+    main .monthly-report .color-text-bold {
+        color: var(--color-purple);
+        font-weight: 800;
+    }
+    main .monthly-report .slide-text-2 .title-2 {
+        color: #fff;
+        font-size: 70px;
+        font-weight: 700;
+        line-height: 90px;
+        margin-bottom: 20px;
+        font-family: 'Josefin Sans', sans-serif;
+        text-transform: uppercase;
     }
     /*===========FAST PAYMENT=====*/
 main .fast-payment{
