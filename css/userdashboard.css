@@ -332,7 +332,7 @@ nav .profile-area .theme-btn span{
      } 
      
      main section.middle .cards .card{
-        background:linear-gradient(#ff796f,#bd261b);
+        background:linear-gradient(#41cfe2,#8130eb);
         padding: var(--card-padding);
         border-radius: var(--card-border-radius);
         color: white;
@@ -340,7 +340,7 @@ nav .profile-area .theme-btn span{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        box-shadow: 0 2rem 3rem var(--color-danger-light);
+        box-shadow: 0 2rem 3rem #41cfe2;
        transition: all 250ms ease;
        min-width: 18rem;
      }
@@ -348,12 +348,12 @@ nav .profile-area .theme-btn span{
         box-shadow: none;
      }
      main section.middle .cards .card:nth-child(2){
-        background:linear-gradient(#7f8191,#27282f);
-        box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2);
+        background:linear-gradient(#ee7c3a,#c2740f);
+        box-shadow: 0 2rem 3rem #ee7c3a;
      }
      main section.middle .cards .card:nth-child(3){
-        background:linear-gradient(#5d70ff,#5719c2);
-        box-shadow: 0 2rem 3rem var(--color-primary-light);
+        background:linear-gradient(#e086b8,#9b19c2);
+        box-shadow: 0 2rem 3rem #e086b8;
      }
      main section.middle .cards .card:hover{
         box-shadow: none;

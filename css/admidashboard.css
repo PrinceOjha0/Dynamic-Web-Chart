@@ -51,7 +51,6 @@ body{
     font-family: poppins, sans-serif;
     min-height: 100vh;
     color: var(--color-dark);
-    
 
 
 }
@@ -466,6 +465,7 @@ main .fast-payment .bade div{
  canvas#chart{
     background:var(--color-white);
     max-width: 100%;
+    transition: all 200ms ease;
     margin-top: 2rem;
     border-radius: var(--card-border-radius);
     padding: var(--card-padding);

@@ -1,7 +1,7 @@
 /*  Root css varibles*/
 :root {
-    --color-white:#ffffff;
-    --color-light: #f0eff5;
+    --color-white:rgb(231, 213, 213);
+    --color-light: hwb(250 94% 4%);
     --color-gray-light: rgb(133, 132, 139);
     -color-gray-dark:#56555e;
     --color-dark: #27282f;
@@ -284,7 +284,6 @@ nav .profile-area .theme-btn span{
      main aside .sidebar h4{
         font-weight: 500;
      }
-
 /*=====Updates*/
      main aside .updates {
         background:var(--color-white);
@@ -318,10 +317,6 @@ nav .profile-area .theme-btn span{
         align-items: center;
         gap: 1rem;
      }
-     main section.middle .header h1{
-        font-weight: 800;
-        font-size: 3.7rem;
-     }
      main section.middle .header input[type="date"]{
         padding: 0.5rem 2rem;
         border-radius: var(--border-radius-2);
@@ -336,7 +331,7 @@ nav .profile-area .theme-btn span{
      } 
      
      main section.middle .cards .card{
-        background:linear-gradient(#ff796f,#bd261b);
+        background:linear-gradient(#f5bef2,#e96dca);
         padding: var(--card-padding);
         border-radius: var(--card-border-radius);
         color: white;
@@ -344,34 +339,20 @@ nav .profile-area .theme-btn span{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        box-shadow: 0 2rem 3rem var(--color-danger-light);
+        box-shadow: 0 2rem 3rem #f5bef2;
        transition: all 250ms ease;
        min-width: 18rem;
      }
-     span.color-text-bold {
-        color: brown;
-    }
-     main section.middle >.container >.cards >.Exchange h1{
-        background:linear-gradient(#ff796f,#bd261b);
-        padding: var(--card-padding);
-        border-radius: var(--card-border-radius);
-        color: white;
-        height: 16rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        box-shadow: 0 2rem 3rem var(--color-danger-light);
-       transition: all 250ms ease;
-       min-width: 18rem;
+     main section.middle.cards{
+        box-shadow: none;
      }
-    
      main section.middle .cards .card:nth-child(2){
-        background:linear-gradient(#7f8191,#27282f);
-        box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2);
+        background:linear-gradient(#ded9df,#c4c46e);
+        box-shadow: 0 2rem 3rem #c4c46e;
      }
      main section.middle .cards .card:nth-child(3){
-        background:linear-gradient(#5d70ff,#5719c2);
-        box-shadow: 0 2rem 3rem var(--color-primary-light);
+        background:linear-gradient(#5d70ff,#d0baf7);
+        box-shadow: 0 2rem 3rem #d0baf7;
      }
      main section.middle .cards .card:hover{
         box-shadow: none;
@@ -417,7 +398,8 @@ nav .profile-area .theme-btn span{
         display: flex;
      gap: 2rem;
      }
-     /*=======================MONTHLY col-title-2==========*/
+     /* col-title-2 Exchange */
+   
       main .monthly-report{
      display: grid;
     grid-template-columns:  repeat(4, 1fr);
@@ -425,15 +407,9 @@ nav .profile-area .theme-btn span{
     justify-content: space-between;
     margin-top: 2rem;
     }
-    
-    main .monthly-report .slide-text-2 .title-2 {
-        color: #fff;
-        font-size: 70px;
-        font-weight: 700;
-        line-height: 90px;
-        margin-bottom: 20px;
-        font-family: 'Josefin Sans', sans-serif;
-        text-transform: uppercase;
+    main .monthly-report h1{
+        font-weight: 800;
+        font-size: 8rem;
     }
     /*===========FAST PAYMENT=====*/
 main .fast-payment{
@@ -596,27 +572,6 @@ main .recent-transactions .card-details .card{
     justify-content: center;
     border-radius: var(--border-radius-2);
 } 
-
-/*  Button css */
-
-.start-btn {
-    padding: 1.2rem 2rem;
-    font-size: 1.8rem;
-    font-weight: 700;
-    text-decoration: none;
-    border-radius: var(--border-radius-2);
-}
-
-.btn { 
-    margin-left: 2.1rem;
-    border-radius: var(--border-radius-2);
-    padding: 1.2rem 2rem;
-    font-size: 1.8rem;
-    font-weight: 700;
-    text-decoration: none;
-}
-
-
 /*====================MEDIA QUERIES FOR TABLETS=========*/
 @media screen and (max-width:1024px) {
     nav .search-bar{

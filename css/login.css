@@ -1,0 +1,86 @@
+
+
+body {
+  background:#ddd ; 
+}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 2rem;
+}
+
+.login-box {
+  background-color: #fff;
+  color:#ddd;
+  border-radius: 10px;
+  box-shadow: 0 0.8rem 0.8rem #fff;;
+  margin-top: 50px;
+  padding: 30px;
+}
+
+.authfy-login .loginOr  {
+  position: relative;
+  font-size: 0.5em;
+  color: #1b0c0c;
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+ .btn-google {
+  background: #db654d;
+  color:#fff;
+  /* box-shadow: 0 0.8rem 0.8rem  #db654d; */
+ margin-bottom: 1rem;
+}
+.btn-linkedin {
+  background: #10c3c3;
+  color:#fff;
+  /* box-shadow: 0 0.8rem 0.8rem #10c3c3; */
+  margin-bottom: 1rem;
+}
+.btn-facebook {
+  background: #1022c3;
+  color:#fff;
+  /* box-shadow: 0 0.8rem 0.8rem   #1022c3; */
+  margin-bottom: rem;
+}
+.authfy-login .social-buttons a {
+  color: #fff;
+}
+
+h3 {
+  margin-bottom: 30px;
+}
+.text-white{
+  color:#aaa !important;
+}
+.text-center {
+  text-align: center;
+}
+.authfy-panel .authfy-heading {
+  margin-bottom: 30px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background-color: #0B3A91;
+  border-color: #0B3A91;
+}
+
+.btn-primary:hover {
+  background-color: #1843AD;
+  border-color: #1843AD;
+}
+
+@media (max-width: 576px) {
+  .login-box {
+    margin-top: 20px;
+  }
+}

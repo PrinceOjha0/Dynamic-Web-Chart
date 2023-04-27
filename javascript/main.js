@@ -150,7 +150,15 @@ const chartConfigs = {
         {
           label: "Bar Chart Price (usd)",
           data: [],
-          backgroundColor: "blue",
+          backgroundColor: [
+            'red',
+            'pink',
+            'yellow',
+            'violet',
+            'green',
+            'white',
+            'purple'
+          ],
           borderWidth: 2,
         },
       ],
@@ -167,7 +175,40 @@ const chartConfigs = {
         {
           label: "radar Chart Price (usd)",
           data: [],
-          backgroundColor: "Pink",
+          backgroundColor:[
+            'red',
+            'pink',
+            'yellow',
+            'violet',
+            'green',
+            'white',
+            'purple'
+          ],
+          borderWidth: 4,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+    },
+  },
+  doughnut: {
+    type: "doughnut",
+    data: {
+      labels: [],
+      datasets: [
+        {
+          label: "doughnut Chart Price (usd)",
+          data: [],
+          backgroundColor:[
+            'red',
+            'pink',
+            'yellow',
+            'violet',
+            'green',
+            'white',
+            'purple'
+          ],
           borderWidth: 3,
         },
       ],
@@ -184,7 +225,13 @@ const chartConfigs = {
         {
           label:  `Pie-Chart Price (usd)`,
          data: [],
-          backgroundColor: "Yellow",
+          backgroundColor: [ '#ff796f',
+          '#bd261b',
+          'yellow',
+          '#6fffec',
+          '#1bbd59',
+          '#b2bbf8',
+          '#9660f3'],
           borderWidth: 2,
         },
       ],
